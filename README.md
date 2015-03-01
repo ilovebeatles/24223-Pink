@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [Павел Шабашов](https://htmlacademy.ru/profile/id24223).
-* Наставник: `Unknown`.
+* Наставник: <a href="https://vk.com/juwain">`Виталий Зюзин`</a>.
 
 --
 
