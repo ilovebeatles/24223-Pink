@@ -5,40 +5,48 @@
 </head>
 <body>
 <div class="center_wrapper">
-	<div class="menu_section">
+	<div class="menu">
 		<div class="logo_block">
-			<div class="logo"></div>
-			<div class="menu"></div>
+			<div class="logo"><img src="" alt=""></div>
+			<div class="menu_block">
+				<button class="menu_btn"></button>
+				<ul>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="menu_title"></div>
 	</div>
-	<div class="download_section">
-		<a href="">Скачать приложение</a>
-		<a href="" class="os_link"><img src="#" alt=""></a>
-		<a href="" class="os_link"><img src="#" alt=""></a>
-		<a href="" class="os_link"><img src="#" alt=""></a>
+	<div class="download">
+		<a href="#">Скачать приложение</a>
+		<a href="#" class="os_link iphone">Iphone</a>
+		<a href="#" class="os_link android">Android</a>
+		<a href="#" class="os_link windows">Windows phone</a>
 		<div class="os_desc">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</div>
 	</div>
-	<div class="deal_section">
-		<div class="deal_title">Устали от серости мегаполиса?</div>
-		<div class="deal_title">Нам есть, что вам предложить!</div>
+	<div class="deal">
+		<div class="section_title">Устали от серости мегаполиса?</div>
+		<div class="section_title">Нам есть, что вам предложить!</div>
 	</div>
-	<div class="benefits_section">
+	<div class="benefits">
 		<div class="benefits_block">
-			<div class="benefits_title"></div>
-			<p></p>
+			<div class="benefits_title">Поднимает настроение</div>
+			<p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
 		</div>
 		<div class="benefits_block">
-			<div class="benefits_title"></div>
-			<p></p>
+			<div class="benefits_title">Меняет мир вокруг</div>
+			<p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
 		</div>
 		<div class="benefits_block">
-			<div class="benefits_title"></div>
-			<p></p>
+			<div class="benefits_title">Заводит новых друзей</div>
+			<p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
 		</div>
 	</div>
-	<div class="review_slider_section">
-		<div id="review_slider">
+	<div class="sliders">
+		<div class="slider review_slider" id="review_slider"> <!-- Вот не знаю, считается ли плохой практикой одинаковые названия у id и class'а. Id был сделан, чтобы обращаться к нему через JS и чтобы скрипты не зависили от стилей. --> 												
 			<div class="slide">
 				<img src="" alt="">
 				<div class="caption">
@@ -62,64 +70,62 @@
 			</div>
 		</div>
 		<div class="pagination">
-			<a href=""></a>
-			<a href=""></a>
-			<a href=""></a>
+			<a href="">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
 		</div>
-	</div>
-	<div class="benefits_slider_section">
-		<div  id="benefits_slider">
+		<div class="slider benefits_slider" id="benefits_slider">
 			<div class="slide">
 				<div class="benefits_table">
 					<div class="table_title">Стандарт</div>
 					<div class="table_price">3,99 USD</div>
-					<div class="table_block">Розовый фильтр <img src="" alt=""></div>
-					<div class="table_block">Смайлики <img src="" alt=""></div>
-					<div class="table_block">Комментарии <img src="" alt=""></div>
+					<div class="table_block">Розовый фильтр</div>
+					<div class="table_block">Смайлики</div>
+					<div class="table_block">Комментарии</div>
 				</div>
 			</div>
 			<div class="slide">
 				<div class="benefits_table">
 					<div class="table_title">Стандарт</div>
 					<div class="table_price">3,99 USD</div>
-					<div class="table_block">Розовый фильтр <img src="" alt=""></div>
-					<div class="table_block">Смайлики <img src="" alt=""></div>
-					<div class="table_block">Комментарии <img src="" alt=""></div>
+					<div class="table_block">Розовый фильтр</div>
+					<div class="table_block">Смайлики</div>
+					<div class="table_block">Комментарии</div>
 				</div>
 			</div>
 			<div class="slide">
 				<div class="benefits_table">
 					<div class="table_title">Стандарт</div>
 					<div class="table_price">3,99 USD</div>
-					<div class="table_block">Розовый фильтр <img src="" alt=""></div>
-					<div class="table_block">Смайлики <img src="" alt=""></div>
-					<div class="table_block">Комментарии <img src="" alt=""></div>
+					<div class="table_block">Розовый фильтр</div>
+					<div class="table_block">Смайлики</div>
+					<div class="table_block">Комментарии</div>
 				</div> 
 			</div>
 		</div>
 		<div class="pagination">
-			<a href=""></a>
-			<a href=""></a>
-			<a href=""></a>
+			<a href="">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
 		</div>
 	</div>
-	<div class="contacts_section">
-		<div class="contacts_title">Остались вопросы?<br/>Свяжитесь с нами!</div>
+	<div class="contacts">
+		<div class="section_title">Остались вопросы?<br/>Свяжитесь с нами!</div>
 		<div class="contacts_block">
 			<b>Звоните:</b>
-			<div class="pink_title">8 (800) 1000 900</div>
+			<div class="contacts_title">8 (800) 1000 900</div>
 		</div>
 		<div class="contacts_block">
 			<b>Пишите:</b>
-			<div class="pink_title">hello@pinkapp.ru</div>
+			<div class="contacts_title">hello@pinkapp.ru</div>
 		</div>
 		<div class="contacts_block">
 			<b>Приезжайте в гости:</b>
-			<div class="pink_title">Санкт-Петербург, Невский проспект, д. 20</div>
+			<div class="contacts_title">Санкт-Петербург, Невский проспект, д. 20</div>
 		</div>
 	</div>
-	<div class="map_section">
-		<iframe></iframe>
+	<div class="map">
+	
 	</div>
 </div>
 </body>
