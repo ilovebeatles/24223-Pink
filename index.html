@@ -2,14 +2,15 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="center_wrapper">
     <div class="menu">
-      <div class="menu__logo_block">
-        <div class="logo"><a href="/">Pink</a></div>
+      <div class="menu__logo_wrapper clearfix">
+        <a class="logo" href="/">Pink</a>
           <div class="menu__list_wrapper">
             <button class="menu__btn">☰</button>
             <ul class="menu__list">
@@ -20,10 +21,11 @@
             </ul>
           </div>
       </div>
-      <div class="menu__title">Взгляните на жизнь иначе!</div>
+      <div class="menu__title">Взгляните на жизнь<br> иначе!</div>
+      <img src="img/header_phone.png" alt="">
     </div>
     <div class="download">
-      <a href="#">Скачать приложение</a>
+      <a class="download__title_link" href="#">Скачать приложение</a>
       <a href="#" class="download__link download__link--iphone" title="Приложение для Iphone">Iphone</a>
       <a href="#" class="download__link download__link--android" title="Приложение для Android">Android</a>
       <a href="#" class="download__link download__link--windows" title="Приложение для Windows Phone">Windows phone</a>
@@ -46,8 +48,9 @@
         <div class="benefits__title">Заводит новых друзей</div>
         <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
       </div>
+      <img src="img/benefits_phone.png" alt="Улыбайтесь">
     </div>
-    <div class="center_wrapper__sliders">
+    <div class="sliders">
       <div class="slider slider--review" id="review_slider">
         <div class="slider__slide">
           <img src="" alt="">
@@ -79,8 +82,10 @@
       <div class="slider slider--benefits" id="benefits_slider">
         <div class="slider__slide">
           <div class="slider--benefits__table">
-            <div class="slider--benefits__table_title">Стандарт</div>
-            <div class="slider--benefits__table_price">3,99 USD</div>
+            <div class="slider--benefits__table_header">
+              <div class="slider--benefits__table_title">Стандарт</div>
+              <div class="slider--benefits__table_price">3,99 USD</div>
+            </div>
             <div class="slider--benefits__table_block">Розовый фильтр</div>
             <div class="slider--benefits__table_block">Смайлики</div>
             <div class="slider--benefits__table_block">Комментарии</div>
@@ -88,8 +93,10 @@
         </div>
         <div class="slider__slide">
           <div class="slider--benefits__table">
-            <div class="slider--benefits__table_title">Стандарт</div>
-            <div class="slider--benefits__table_price">3,99 USD</div>
+            <div class="slider--benefits__table_header">
+              <div class="slider--benefits__table_title">Стандарт</div>
+              <div class="slider--benefits__table_price">3,99 USD</div>
+            </div>
             <div class="slider--benefits__table_block">Розовый фильтр</div>
             <div class="slider--benefits__table_block">Смайлики</div>
             <div class="slider--benefits__table_block">Комментарии</div>
@@ -97,15 +104,17 @@
         </div>
         <div class="slider__slide">
           <div class="slider--benefits__table">
-            <div class="slider--benefits__table_title">Стандарт</div>
-            <div class="slider--benefits__table_price">3,99 USD</div>
+            <div class="slider--benefits__table_header">
+              <div class="slider--benefits__table_title">Стандарт</div>
+              <div class="slider--benefits__table_price">3,99 USD</div>
+            </div>
             <div class="slider--benefits__table_block">Розовый фильтр</div>
             <div class="slider--benefits__table_block">Смайлики</div>
             <div class="slider--benefits__table_block">Комментарии</div>
           </div> 
         </div>
         <div class="slider_pagination">
-          <a href="">1</a>
+          <a class="active" href="">1</a>
           <a href="">2</a>
           <a href="">3</a>
         </div>

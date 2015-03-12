@@ -1,9 +1,283 @@
+.list_style {
+  list-style: none;
+}
+/* Рамки в меню */
+/* Цвет меню */
+/* Benefits border */
+/* Pagination */
+@font-face {
+  font-family: "Gotham";
+  src: url("../css/fonts/gotham-rounded-book.otf");
+}
+html {
+  font-size: 10px;
+}
+body {
+  background: #3498db;
+}
 .center_wrapper {
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
   color: #1d2631;
 }
+/*
+        Header
+*/
+.logo {
+  color: #ffffff;
+  font: 3.2em "Gotham";
+  text-transform: uppercase;
+  text-decoration: none;
+}
 .menu {
   background: url('../img/header_background.jpg') no-repeat;
-  min-height: 500px;
+}
+.menu__title {
+  font: lighter 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.menu__logo_wrapper {
+  padding: 10px 20px;
+  background: url("../img/menu-background.png");
+}
+.menu__list_wrapper {
+  position: relative;
+  float: right;
+}
+.menu__btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 3em;
+}
+.menu__list {
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: 0;
+  padding: 0;
+}
+.menu__list li:first-child {
+  border-top: 0;
+}
+.menu__list li {
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #485460;
+  text-align: center;
+  background: #283645;
+  list-style: none;
+}
+.menu__list li a {
+  font: bold 1.8em/3.2em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/*
+        End
+
+*/
+/*
+        Download
+*/
+.download {
+  padding: 20px 25px;
+  background: #1d2631;
+  text-align: center;
+}
+.download__title_link {
+  display: block;
+  margin-bottom: 25px;
+  border: 3px solid #ffffff;
+  border-radius: 5em;
+  padding: 10px 30px;
+  font: bold 1.8em / 1.8em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+}
+.download__link {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 48px;
+  height: 60px;
+  margin-right: 30px;
+  text-indent: -9999px;
+  background: url("../img/os_sprite.png") no-repeat;
+}
+.download__link--iphone {
+  background-position: ;
+}
+.download__link--android {
+  background-position: -80px;
+}
+.download__link--windows {
+  background-position: -159px;
+  margin-right: 0;
+}
+.download__desc {
+  margin-top: 25px;
+  font: lighter 1.4em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+}
+/*
+        End
+*/
+/*
+        Deal
+*/
+.deal {
+  background-image: linear-gradient(171deg, #ffffff 80%, #f2f2f2 20%);
+  padding: 25px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+/*
+      End
+*/
+/*
+      Section title
+*/
+.section_title {
+  margin-bottom: 30px;
+  font: normal 2.4em / 20px "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #283645;
+  text-transform: none;
+  text-decoration: none;
+}
+/*
+      End
+*/
+/*
+      Benefits
+*/
+.benefits {
+  background: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  padding-bottom: 0;
+}
+.benefits__item p {
+  font: normal 1.4em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #283645;
+  text-transform: none;
+  text-decoration: none;
+}
+.benefits__title {
+  font: bold 1.8em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #000000;
+  text-transform: none;
+  text-decoration: none;
+}
+/*
+      End
+*/
+/*
+      Sliders
+*/
+.sliders {
+  text-align: center;
+}
+/*
+==============Review slider
+*/
+.slider--review {
+  background: #ffffff;
+}
+.slider--review__caption p {
+  font: normal 1.4em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #283645;
+  text-transform: none;
+  text-decoration: none;
+}
+.slider--review__title {
+  font: bold 1.8em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #000000;
+  text-transform: none;
+  text-decoration: none;
+}
+/* Section end */
+/*
+==============Benefits slider
+*/
+.slider--benefits {
+  background-image: linear-gradient(173deg, #ffffff 5%, #f2f2f2 5%);
+  padding-top: 50px;
+}
+.slider--benefits .slider__slide {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+}
+.slider--benefits__table_header {
+  background: #1d2631;
+}
+.slider--benefits__table_title {
+  font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+}
+.slider--benefits__table_price {
+  font: normal 2.4em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #ffffff;
+  text-transform: none;
+  text-decoration: none;
+}
+.slider--benefits__table_block {
+  padding-left: 15px;
+  border-bottom: 2px solid #e5e5e5;
+  text-align: left;
+  font: normal 1.4em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #1d2631;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* Section end */
+/*
+      End
+*/
+/*
+      Pagination
+*/
+.slider_pagination a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  background: #b5b9be;
+}
+.slider_pagination a.active {
+  border: 3px solid #1d2631;
+  background: transparent;
+}
+/*
+      End
+*/
+/*
+      Contacts
+*/
+.contacts {
+  text-align: center;
+  background: #ffffff;
+}
+.contacts__wrapper b {
+  font: bold 1.8em / 1.8em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #1d2631;
+  text-transform: none;
+  text-decoration: none;
+}
+.contacts__title {
+  font: lighter 2.4em / 1.8em "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #d22856;
+  text-transform: none;
+  text-decoration: none;
 }

@@ -1,0 +1,30 @@
+.uppercase() {
+    text-transform: uppercase;
+}
+
+.decoration () {
+    text-decoration: none;
+}
+
+.center () {
+    text-align: center;
+}
+
+.paddings_off () {
+    padding: 0;
+}
+
+.paddings_on () {
+    padding: 0px 20px;
+}
+
+.list_style {
+    list-style: none;
+}
+
+.font (@weight: normal, @fz, @lh: 20px, @ff, @color, @transform: none, @decoration: none) {
+  font: @weight @fz / @lh @ff;
+  color: @color;
+  text-transform: @transform;
+  text-decoration: @decoration;
+}

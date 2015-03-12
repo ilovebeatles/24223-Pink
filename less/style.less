@@ -1,22 +1,409 @@
+@import url("functions.less");
 @import url("variables.less");
 @font-face {
-	font-family: "Gotham";
-	src: url("../css/fonts/gotham-rounded-book.otf");
+  font-family: "Gotham";
+  src: url("../css/fonts/gotham-rounded-book.otf");
+}
+
+html {
+    font-size: @size;
+}
+
+body {
+  background: #3498db;
+}
+
+// *,
+// *:before,
+// *:after {
+//  box-sizing: inherit;
+// }
+
+.center_wrapper { 
+  width: 320px;
+  margin: 0 auto;
+  color: @dark;
 }
 
 
-.center_wrapper { 
-	width: 280px;
-	margin: 0 auto;
-	color: @dark_color;
+/*
+        Header
+*/
+
+.logo {
+  color: @white;
+  font: 3.2em "Gotham";
+  .uppercase();
+  .decoration();
 }
 
 .menu {
-	background: url('../img/header_background.jpg') no-repeat;
-	min-height: 500px;
+  background: url('../img/header_background.jpg') no-repeat;
 }
 
-.logo a {
-	color: @white;
-	font: 32px "Gotham";
-}  
+.menu__title {
+  font: lighter 2.4em @font;
+  color: @white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.menu__logo_wrapper {
+  padding: 10px 20px;
+  background: url("../img/menu-background.png");
+}
+
+.menu__list_wrapper {
+  position: relative;
+  float: right;
+}
+
+.menu__btn {
+  background: transparent;
+  border: none;
+  color: @white;
+  font-size: 3em;
+}
+
+.menu__list {
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: 0;
+  .paddings_off();
+  
+  li:first-child {
+    border-top: 0;
+  }
+
+  li {
+    border-bottom: 1px solid @black;
+    border-top: 1px solid @lighter;
+    .center();
+    background: @menu_blue;
+    .list_style();
+
+    a {
+      font: bold 1.8em/3.2em @font;
+      color: @white;
+      .decoration();
+      .uppercase();
+    }
+  }
+}
+
+
+
+
+/*
+        End
+
+*/
+
+/*
+        Download
+*/
+
+
+.download {
+  padding: 20px 25px;
+  background: @dark;
+  .center();
+}
+
+.download__title_link {
+  display: block;
+  margin-bottom: 25px;
+  border: 3px solid @white;
+  border-radius: 5em;
+  padding: 10px 30px;
+  .font(bold, 1.8em, 1.8em, @font, @white);
+  .decoration();
+}
+
+.download__link {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 48px;
+  height: 60px;
+  margin-right: 30px;
+  text-indent: -9999px;
+  background: url("../img/os_sprite.png") no-repeat;
+
+}
+
+.download__link--iphone {
+  background-position: ;
+}
+
+.download__link--android {
+  background-position: -80px;
+}
+
+.download__link--windows {
+  background-position: -159px;
+  margin-right: 0;
+}
+
+.download__desc {
+  margin-top: 25px;
+  .font(lighter, 1.4em, 2.4em, @font, @white);
+}
+
+/*
+        End
+*/
+
+
+
+
+/*
+        Deal
+*/
+
+
+
+
+.deal {
+  background-image: linear-gradient(171deg, @white 80%, @gray 20%);
+  padding: 25px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+      End
+*/
+
+
+
+/*
+      Section title
+*/
+
+
+
+
+.section_title {
+  margin-bottom: 30px;
+  .font(@fz: 2.4em, @color: #283645, @ff: @font);
+}
+
+
+
+
+/*
+      End
+*/
+
+
+
+/*
+      Benefits
+*/
+
+
+.benefits {
+  background: @gray;
+  text-align: center;
+  padding: 20px 20px;
+  padding-bottom: 0;
+}
+
+.benefits__item p {
+  .font(normal, 1.4em, 2.4em, @font, @menu_blue);
+}
+
+.benefits__title {
+  .font(bold, 1.8em, 2.4em, @font, @black);
+}
+
+
+
+
+
+
+
+
+
+/*
+      End
+*/
+
+
+
+/*
+      Sliders
+*/
+
+
+.sliders {
+  text-align: center;
+}
+
+
+/*
+==============Review slider
+*/
+
+.slider--review {
+  background: @white;
+}
+
+.slider--review__caption p {
+  .font(normal, 1.4em, 3em, @font, @menu_blue);
+}
+
+.slider--review__title {
+  .font(bold, 1.8em, 3em, @font, @black);
+}
+
+
+
+/* Section end */
+
+
+
+/*
+==============Benefits slider
+*/
+
+
+.slider--benefits {
+  background-image: linear-gradient(173deg, @white 5%, @gray 5%);
+  padding-top: 50px;
+}
+
+.slider--benefits .slider__slide {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  border-right: 2px solid @gray2;
+  border-left: 2px solid @gray2;
+}
+
+
+.slider--benefits__table_header {
+  background: @dark;
+}
+
+.slider--benefits__table_title {
+  .font(bold, 18px, 30px, @font ,@white);
+}
+
+.slider--benefits__table_price {
+  .font(normal, 2.4em, 3em, @font, @white);
+}
+
+.slider--benefits__table_block {
+  padding-left: 15px;
+  border-bottom: 2px solid @gray2;
+  text-align: left;
+  .font(normal, 1.4em, 3em, @font, @dark, uppercase)
+}
+
+/* Section end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+      End
+*/
+
+
+/*
+      Pagination
+*/
+
+
+
+
+
+.slider_pagination a{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  background: @gray3;
+}
+
+
+.slider_pagination a.active {
+  border: 3px solid @dark;
+  background: transparent;
+}
+
+
+
+
+
+/*
+      End
+*/
+
+
+
+
+
+
+/*
+      Contacts
+*/
+
+
+
+
+.contacts {
+  text-align: center;
+  background: @white;
+}
+
+
+.contacts__wrapper b {
+  .font(bold, 1.8em, 1.8em, @font, @dark);
+}
+
+.contacts__title {
+  .font(lighter, 2.4em, 1.8em, @font, @pink);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+      End
+*/
