@@ -12,7 +12,8 @@
       <div class="menu__logo_wrapper clearfix">
         <a class="logo" href="/">Pink</a>
           <div class="menu__list_wrapper">
-            <button class="menu__btn">☰</button>
+            <!-- <button class="menu__btn">☰</button> -->
+            <a href="" class="toggler" id="toggler"><span>☰</span></a>
             <ul class="menu__list">
               <li><a href="#">Информация</a></li>
               <li><a href="#">Возможности</a></li>
@@ -59,14 +60,14 @@
             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </div>
-        <div class="slider__slide">
+        <div style="display: none;" class="slider__slide">
           <img src="" alt="">
           <div class="slider--review__caption">
             <div class="slider--review__title">Николай Петров</div>
             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </div>
         </div>
-        <div class="slider__slide">
+        <div style="display: none;" class="slider__slide">
           <img src="" alt="">
           <div class="slider--review__caption">
             <div class="slider--review__title">Николай Петров</div>
@@ -74,7 +75,7 @@
           </div>
         </div>
         <div class="slider_pagination">
-          <a href="">1</a>
+          <a class="active" href="">1</a>
           <a href="">2</a>
           <a href="">3</a>
         </div>
@@ -86,9 +87,9 @@
               <div class="slider--benefits__table_title">Стандарт</div>
               <div class="slider--benefits__table_price">3,99 USD</div>
             </div>
-            <div class="slider--benefits__table_block">Розовый фильтр</div>
-            <div class="slider--benefits__table_block">Смайлики</div>
-            <div class="slider--benefits__table_block">Комментарии</div>
+            <div class="slider--benefits__table_block slider--benefits__table_block--checked">Розовый фильтр</div>
+            <div class="slider--benefits__table_block slider--benefits__table_block--checked">Смайлики</div>
+            <div class="slider--benefits__table_block slider--benefits__table_block--unchecked">Комментарии</div>
           </div>
         </div>
         <div class="slider__slide">

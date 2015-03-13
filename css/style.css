@@ -119,8 +119,8 @@ body {
   margin-right: 0;
 }
 .download__desc {
-  margin-top: 25px;
-  font: lighter 1.4em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  margin-top: 20px;
+  font: lighter 14px / 24px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
   text-transform: none;
   text-decoration: none;
@@ -132,8 +132,9 @@ body {
         Deal
 */
 .deal {
-  background-image: linear-gradient(171deg, #ffffff 80%, #f2f2f2 20%);
+  background-image: linear-gradient(175deg, #ffffff 80%, #f2f2f2 20%);
   padding: 25px;
+  padding-top: 35px;
   padding-bottom: 60px;
   text-align: center;
 }
@@ -145,7 +146,7 @@ body {
 */
 .section_title {
   margin-bottom: 30px;
-  font: normal 2.4em / 20px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: normal 2.4em / normal "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #283645;
   text-transform: none;
   text-decoration: none;
@@ -160,13 +161,18 @@ body {
   background: #f2f2f2;
   text-align: center;
   padding: 20px 20px;
+  padding-top: 0;
   padding-bottom: 0;
 }
+.benefits__item {
+  margin-bottom: 25px;
+}
 .benefits__item p {
-  font: normal 1.4em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: normal 14px / 24px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #283645;
   text-transform: none;
   text-decoration: none;
+  margin-top: 0;
 }
 .benefits__title {
   font: bold 1.8em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
@@ -182,21 +188,28 @@ body {
 */
 .sliders {
   text-align: center;
+  overflow: hidden;
 }
 /*
 ==============Review slider
 */
 .slider--review {
   background: #ffffff;
+  padding-top: 50px;
+}
+.slider--review__caption {
+  width: 280px;
+  margin: 0 auto;
 }
 .slider--review__caption p {
-  font: normal 1.4em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: normal 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #283645;
   text-transform: none;
   text-decoration: none;
+  margin-bottom: 25px;
 }
 .slider--review__title {
-  font: bold 1.8em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #000000;
   text-transform: none;
   text-decoration: none;
@@ -206,39 +219,67 @@ body {
 ==============Benefits slider
 */
 .slider--benefits {
-  background-image: linear-gradient(173deg, #ffffff 5%, #f2f2f2 5%);
+  width: 9999px;
   padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: left;
+  background-image: linear-gradient(176.5deg, #ffffff 5%, #f2f2f2 5%);
 }
 .slider--benefits .slider__slide {
-  width: 100%;
+  width: 275px;
   display: inline-block;
   vertical-align: top;
   border-right: 2px solid #e5e5e5;
   border-left: 2px solid #e5e5e5;
 }
 .slider--benefits__table_header {
-  background: #1d2631;
+  position: relative;
+  background: #283645;
+  text-align: center;
+  padding: 25px 0;
+}
+.slider--benefits__table_header:before {
+  content: "Хит";
+  padding: 10px 25px;
+  left: -1px;
+  top: 8px;
+  position: absolute;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-49deg);
+  background: red;
+  font: 400 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .slider--benefits__table_title {
   font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
-  text-transform: none;
+  text-transform: uppercase;
   text-decoration: none;
 }
 .slider--benefits__table_price {
-  font: normal 2.4em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: normal 24px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
   text-transform: none;
   text-decoration: none;
 }
 .slider--benefits__table_block {
-  padding-left: 15px;
+  padding: 20px 0 20px 15px;
   border-bottom: 2px solid #e5e5e5;
-  text-align: left;
-  font: normal 1.4em / 3em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: normal 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #1d2631;
   text-transform: uppercase;
   text-decoration: none;
+  background: #ffffff;
+  text-align: left;
+}
+.slider--benefits__table_block--checked {
+  background: #ffffff url("../img/checked.png") no-repeat 90%;
+}
+.slider--benefits__table_block--unchecked {
+  background: #ffffff url("../img/unchecked.png") no-repeat 90%;
 }
 /* Section end */
 /*
@@ -249,8 +290,10 @@ body {
 */
 .slider_pagination a {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
   text-indent: -9999px;
   border-radius: 50%;
   background: #b5b9be;
@@ -266,11 +309,16 @@ body {
       Contacts
 */
 .contacts {
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
-  background: #ffffff;
+  background-image: linear-gradient(380deg, transparent 20%, #ffffff 20%), linear-gradient(341deg, transparent 20%, #ffffff 20%);
+}
+.contacts__wrapper {
+  margin-bottom: 25px;
 }
 .contacts__wrapper b {
-  font: bold 1.8em / 1.8em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: bold 1.8em / normal "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #1d2631;
   text-transform: none;
   text-decoration: none;
@@ -280,4 +328,56 @@ body {
   color: #d22856;
   text-transform: none;
   text-decoration: none;
+}
+.toggler {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 3em;
+  line-height: 3em;
+  user-select: none;
+  text-indent: -9999px;
+}
+.toggler > span {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+  height: .3rem;
+  background: #fff;
+  border-radius: .2rem;
+  position: relative;
+  transition: background .3s .5s;
+}
+.toggler > span:before,
+.toggler > span:after {
+  width: 100%;
+  height: .3rem;
+  background: #fff;
+  border-radius: .2rem;
+  position: absolute;
+  left: 0;
+  content: '';
+  transform-origin: 50% 50%;
+  transition: top .3s .6s, transform .3s;
+}
+.toggler > span:before {
+  top: 1rem;
+}
+.toggler > span:after {
+  top: -1rem;
+}
+.toggler--close > span {
+  transition: background .3s 0;
+  background: transparent;
+}
+.toggler--close > span:before,
+.toggler--close > span:after {
+  transition: top .3s, transform .3s .5s;
+  top: 0;
+}
+.toggler--close > span:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+.toggler--close > span:after {
+  transform: rotate3d(0, 0, 1, -45deg);
 }

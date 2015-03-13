@@ -147,8 +147,9 @@ body {
 }
 
 .download__desc {
-  margin-top: 25px;
-  .font(lighter, 1.4em, 2.4em, @font, @white);
+  margin-top: 20px;
+  .font(lighter, 14px, 24px, @font, @white);
+  // .font(lighter, 1.4em, 2.4em, @font, @white);
 }
 
 /*
@@ -166,8 +167,9 @@ body {
 
 
 .deal {
-  background-image: linear-gradient(171deg, @white 80%, @gray 20%);
+  background-image: linear-gradient(175deg, @white 80%, @gray 20%);
   padding: 25px;
+  padding-top: 35px;
   padding-bottom: 60px;
   text-align: center;
 }
@@ -219,11 +221,17 @@ body {
   background: @gray;
   text-align: center;
   padding: 20px 20px;
+  padding-top: 0;
   padding-bottom: 0;
 }
 
+.benefits__item {
+  margin-bottom: 25px;
+}
+
 .benefits__item p {
-  .font(normal, 1.4em, 2.4em, @font, @menu_blue);
+  .font(normal, 14px, 24px, @font, @menu_blue);
+  margin-top: 0;
 }
 
 .benefits__title {
@@ -251,6 +259,7 @@ body {
 
 .sliders {
   text-align: center;
+  overflow: hidden;
 }
 
 
@@ -260,14 +269,21 @@ body {
 
 .slider--review {
   background: @white;
+  padding-top: 50px;
+}
+
+.slider--review__caption {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .slider--review__caption p {
-  .font(normal, 1.4em, 3em, @font, @menu_blue);
+  .font(normal, 14px, 30px, @font, @menu_blue);
+  margin-bottom: 25px;
 }
 
 .slider--review__title {
-  .font(bold, 1.8em, 3em, @font, @black);
+  .font(bold, 18px, 30px, @font, @black);
 }
 
 
@@ -282,12 +298,15 @@ body {
 
 
 .slider--benefits {
-  background-image: linear-gradient(173deg, @white 5%, @gray 5%);
+  width: 9999px;
   padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: left;
+  background-image: linear-gradient(176.5deg, @white 5%, @gray 5%)
 }
 
 .slider--benefits .slider__slide {
-  width: 100%;
+  width: 275px;
   display: inline-block;
   vertical-align: top;
   border-right: 2px solid @gray2;
@@ -296,22 +315,48 @@ body {
 
 
 .slider--benefits__table_header {
-  background: @dark;
+  position: relative;
+  background: @menu_blue;
+  text-align: center;
+  padding: 25px 0;
+}
+
+.slider--benefits__table_header:before {
+  content: "Хит";
+  padding: 10px 25px;
+  left: -1px;
+  top: 8px;
+  position: absolute;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-49deg);
+  background: red;
+  .font(400, 14px, 30px, @font, @white, uppercase);
+
 }
 
 .slider--benefits__table_title {
-  .font(bold, 18px, 30px, @font ,@white);
+  .font(bold, 18px, 30px, @font ,@white, uppercase);
 }
 
 .slider--benefits__table_price {
-  .font(normal, 2.4em, 3em, @font, @white);
+  .font(normal, 24px, 30px, @font, @white);
 }
 
 .slider--benefits__table_block {
-  padding-left: 15px;
+  padding: 20px 0 20px 15px;
   border-bottom: 2px solid @gray2;
+  .font(normal, 14px, 30px, @font, @dark, uppercase);
+  background: @white;
   text-align: left;
-  .font(normal, 1.4em, 3em, @font, @dark, uppercase)
+}
+
+.slider--benefits__table_block--checked {
+  background: @white url("../img/checked.png") no-repeat 90%;
+}
+
+.slider--benefits__table_block--unchecked {
+  background: @white url("../img/unchecked.png") no-repeat 90%;
 }
 
 /* Section end */
@@ -347,8 +392,10 @@ body {
 
 .slider_pagination a{
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
   text-indent: -9999px;
   border-radius: 50%;
   background: @gray3;
@@ -381,13 +428,18 @@ body {
 
 
 .contacts {
+  padding-top: 40px;
+  padding-bottom: 40px;
   text-align: center;
-  background: @white;
+  background-image: linear-gradient(380deg, transparent 20%, @white 20%), linear-gradient(341deg, transparent 20%, @white 20%);
 }
 
+.contacts__wrapper {
+  margin-bottom: 25px;
+}
 
 .contacts__wrapper b {
-  .font(bold, 1.8em, 1.8em, @font, @dark);
+  .font(@weight: bold, @fz: 1.8em, @ff: @font, @color: @dark);
 }
 
 .contacts__title {
@@ -399,6 +451,68 @@ body {
 
 
 
+.toggler {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 3em;
+  line-height: 3em;
+  user-select: none;
+  text-indent: -9999px;
+  
+  > span {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+    height: .3rem;
+    background: #fff;
+    border-radius: .2rem;
+    position: relative;
+    transition: background .3s .5s;
+    
+    &:before,
+    &:after {
+      width: 100%;
+      height: .3rem;
+      background: #fff;
+      border-radius: .2rem;
+      position: absolute;
+      left: 0;
+      content: '';
+      transform-origin: 50% 50%;
+      transition: top .3s .6s, transform .3s;
+    }
+    
+    &:before {
+      top: 1rem;
+    }
+    
+    &:after {
+      top: -1rem;
+    }
+  }
+  
+  &--close {
+    > span {
+      transition: background .3s 0;
+      background: transparent;
+      
+      &:before,
+      &:after {
+        transition: top .3s, transform .3s .5s;
+        top: 0;
+      }
+      
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+      
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}
 
 
 
