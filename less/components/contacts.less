@@ -1,0 +1,43 @@
+
+.contacts {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  .center();
+  background: @white;
+}
+
+// Пройдём svg - попробую через него сделать
+
+.contacts:before, .contacts:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 70px;
+  bottom: -70px;
+}
+
+.contacts:before {
+  left: 0;
+  background-image: linear-gradient(-345deg, transparent 50%, @white 50%);
+}
+
+.contacts:after {
+  right: 0;
+  background-image: linear-gradient(345deg, transparent 50%, @white 50%);
+}
+
+.contacts__wrapper {
+  margin-bottom: 20px;
+}
+
+.contacts__wrapper b {
+  .font(bold, 18px, normal, @font, @menu_blue);
+}
+
+.contacts__title {
+  width: 90%;
+  margin: 0 auto;
+  .font(lighter, 24px, normal, @font, @pink); // Одинаковые значения пикселей и ем отличаются 
+  // .font(lighter, 2.4em, 1.8em, @font, @pink);
+}

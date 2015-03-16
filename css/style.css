@@ -1,13 +1,6 @@
-.list_style {
-  list-style: none;
-}
-/* Рамки в меню */
-/* Цвет меню */
-/* Benefits border */
-/* Pagination */
 @font-face {
   font-family: "Gotham";
-  src: url("../css/fonts/gotham-rounded-book.otf");
+  src: url("../css/fonts/gotham-rounded-book.otf"), url("../css/fonts/gotham-rounded-book.eot"), url("../css/fonts/gotham-rounded-book.ttf"), url("../css/fonts/gotham-rounded-book.woff"), url("../css/fonts/gotham-rounded-book.svg");
 }
 html {
   font-size: 10px;
@@ -20,14 +13,19 @@ body {
   margin: 0 auto;
   color: #1d2631;
 }
-/*
-        Header
-*/
+.list {
+  list-style: none;
+}
+/* Рамки в меню */
+/* Цвет меню */
+/* Benefits border */
+/* Pagination */
 .logo {
+  font: normal 32px / 39px "Gotham";
   color: #ffffff;
-  font: 3.2em "Gotham";
   text-transform: uppercase;
   text-decoration: none;
+  text-indent: -9999px;
 }
 .menu {
   background: url('../img/header_background.jpg') no-repeat;
@@ -47,12 +45,6 @@ body {
   position: relative;
   float: right;
 }
-.menu__btn {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 3em;
-}
 .menu__list {
   position: absolute;
   width: 100%;
@@ -71,20 +63,65 @@ body {
   list-style: none;
 }
 .menu__list li a {
-  font: bold 1.8em/3.2em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font: bold 18px / 32px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
 }
-/*
-        End
-
-*/
-/*
-        Download
-*/
+.menu_btn {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 3em;
+  line-height: 3em;
+  user-select: none;
+  text-indent: -9999px;
+}
+.menu_btn > span {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+  height: .3rem;
+  background: #fff;
+  border-radius: .2rem;
+  position: relative;
+  transition: background .3s .5s;
+}
+.menu_btn > span:before,
+.menu_btn > span:after {
+  width: 100%;
+  height: .3rem;
+  background: #fff;
+  border-radius: .2rem;
+  position: absolute;
+  left: 0;
+  content: '';
+  transform-origin: 50% 50%;
+  transition: top .3s .6s, transform .3s;
+}
+.menu_btn > span:before {
+  top: 1rem;
+}
+.menu_btn > span:after {
+  top: -1rem;
+}
+.menu_btn--close > span {
+  transition: background .3s 0;
+  background: transparent;
+}
+.menu_btn--close > span:before,
+.menu_btn--close > span:after {
+  transition: top .3s, transform .3s .5s;
+  top: 0;
+}
+.menu_btn--close > span:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+.menu_btn--close > span:after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
 .download {
-  padding: 20px 25px;
+  padding: 25px 25px;
   background: #1d2631;
   text-align: center;
 }
@@ -122,47 +159,11 @@ body {
   margin-top: 20px;
   font: lighter 14px / 24px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
-  text-transform: none;
-  text-decoration: none;
 }
-/*
-        End
-*/
-/*
-        Deal
-*/
-.deal {
-  background-image: linear-gradient(175deg, #ffffff 80%, #f2f2f2 20%);
-  padding: 25px;
-  padding-top: 35px;
-  padding-bottom: 60px;
-  text-align: center;
-}
-/*
-      End
-*/
-/*
-      Section title
-*/
-.section_title {
-  margin-bottom: 30px;
-  font: normal 2.4em / normal "Open sans", "Tahoma", "Verdana", sans-serif;
-  color: #283645;
-  text-transform: none;
-  text-decoration: none;
-}
-/*
-      End
-*/
-/*
-      Benefits
-*/
 .benefits {
   background: #f2f2f2;
+  padding: 0 20px;
   text-align: center;
-  padding: 20px 20px;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 .benefits__item {
   margin-bottom: 25px;
@@ -170,32 +171,23 @@ body {
 .benefits__item p {
   font: normal 14px / 24px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #283645;
-  text-transform: none;
-  text-decoration: none;
   margin-top: 0;
 }
 .benefits__title {
   font: bold 1.8em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #000000;
-  text-transform: none;
-  text-decoration: none;
 }
-/*
-      End
-*/
-/*
-      Sliders
-*/
 .sliders {
   text-align: center;
   overflow: hidden;
 }
 /*
-==============Review slider
+        Review slider
 */
 .slider--review {
   background: #ffffff;
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 .slider--review__caption {
   width: 280px;
@@ -204,23 +196,18 @@ body {
 .slider--review__caption p {
   font: normal 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #283645;
-  text-transform: none;
-  text-decoration: none;
   margin-bottom: 25px;
 }
 .slider--review__title {
   font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #000000;
-  text-transform: none;
-  text-decoration: none;
 }
 /* Section end */
 /*
-==============Benefits slider
+        Benefits slider
 */
 .slider--benefits {
-  width: 9999px;
-  padding-top: 50px;
+  padding-top: 85px;
   padding-bottom: 50px;
   text-align: left;
   background-image: linear-gradient(176.5deg, #ffffff 5%, #f2f2f2 5%);
@@ -229,44 +216,45 @@ body {
   width: 275px;
   display: inline-block;
   vertical-align: top;
-  border-right: 2px solid #e5e5e5;
   border-left: 2px solid #e5e5e5;
 }
-.slider--benefits__table_header {
+.slider--benefits .slider__slide:last-of-type {
+  border-right: 2px solid #e5e5e5;
+}
+.slider--benefits__header {
   position: relative;
   background: #283645;
   text-align: center;
-  padding: 25px 0;
+  padding: 20px 0;
+  overflow: hidden;
 }
-.slider--benefits__table_header:before {
+.slider--benefits__header--hit:before {
   content: "Хит";
-  padding: 10px 25px;
-  left: -1px;
-  top: 8px;
+  padding: 0 50px;
+  left: -40px;
+  top: 10px;
   position: absolute;
   -webkit-transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
   transform: rotate(-49deg);
-  background: red;
+  background: #d22856;
   font: 400 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 }
-.slider--benefits__table_title {
+.slider--benefits__title {
   font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 }
-.slider--benefits__table_price {
+.slider--benefits__price {
   font: normal 24px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #ffffff;
-  text-transform: none;
-  text-decoration: none;
 }
-.slider--benefits__table_block {
-  padding: 20px 0 20px 15px;
+.slider--benefits__info {
+  padding: 15px 0 15px 20px;
   border-bottom: 2px solid #e5e5e5;
   font: normal 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #1d2631;
@@ -275,109 +263,78 @@ body {
   background: #ffffff;
   text-align: left;
 }
-.slider--benefits__table_block--checked {
+.slider--benefits__table_wrapper {
+  width: 99999px;
+  font-size: 0;
+  transform: translateX(-256px);
+  margin-bottom: 35px;
+}
+.slider--benefits__info--checked {
   background: #ffffff url("../img/checked.png") no-repeat 90%;
 }
-.slider--benefits__table_block--unchecked {
+.slider--benefits__info--unchecked {
   background: #ffffff url("../img/unchecked.png") no-repeat 90%;
 }
-/* Section end */
-/*
-      End
-*/
-/*
-      Pagination
-*/
+.contacts {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  text-align: center;
+  background: #ffffff;
+}
+.contacts:before,
+.contacts:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 70px;
+  bottom: -70px;
+}
+.contacts:before {
+  left: 0;
+  background-image: linear-gradient(-345deg, transparent 50%, #ffffff 50%);
+}
+.contacts:after {
+  right: 0;
+  background-image: linear-gradient(345deg, transparent 50%, #ffffff 50%);
+}
+.contacts__wrapper {
+  margin-bottom: 20px;
+}
+.contacts__wrapper b {
+  font: bold 18px / normal "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #283645;
+}
+.contacts__title {
+  width: 90%;
+  margin: 0 auto;
+  font: lighter 24px / normal "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #d22856;
+}
+.deal {
+  background-image: linear-gradient(175deg, #ffffff 80%, #f2f2f2 20%);
+  padding: 35px 25px 60px 25px;
+  text-align: center;
+}
+.section_title {
+  margin-bottom: 30px;
+  font: normal 24px / normal "Open sans", "Tahoma", "Verdana", sans-serif;
+  color: #283645;
+}
+.slider_pagination {
+  text-align: center;
+}
 .slider_pagination a {
   display: inline-block;
   vertical-align: middle;
   width: 6px;
   height: 6px;
   margin-right: 15px;
-  text-indent: -9999px;
   border-radius: 50%;
   background: #b5b9be;
+  text-indent: -9999px;
 }
 .slider_pagination a.active {
   border: 3px solid #1d2631;
   background: transparent;
-}
-/*
-      End
-*/
-/*
-      Contacts
-*/
-.contacts {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: center;
-  background-image: linear-gradient(380deg, transparent 20%, #ffffff 20%), linear-gradient(341deg, transparent 20%, #ffffff 20%);
-}
-.contacts__wrapper {
-  margin-bottom: 25px;
-}
-.contacts__wrapper b {
-  font: bold 1.8em / normal "Open sans", "Tahoma", "Verdana", sans-serif;
-  color: #1d2631;
-  text-transform: none;
-  text-decoration: none;
-}
-.contacts__title {
-  font: lighter 2.4em / 1.8em "Open sans", "Tahoma", "Verdana", sans-serif;
-  color: #d22856;
-  text-transform: none;
-  text-decoration: none;
-}
-.toggler {
-  display: flex;
-  align-items: center;
-  width: 50px;
-  height: 3em;
-  line-height: 3em;
-  user-select: none;
-  text-indent: -9999px;
-}
-.toggler > span {
-  display: inline-block;
-  vertical-align: bottom;
-  width: 100%;
-  height: .3rem;
-  background: #fff;
-  border-radius: .2rem;
-  position: relative;
-  transition: background .3s .5s;
-}
-.toggler > span:before,
-.toggler > span:after {
-  width: 100%;
-  height: .3rem;
-  background: #fff;
-  border-radius: .2rem;
-  position: absolute;
-  left: 0;
-  content: '';
-  transform-origin: 50% 50%;
-  transition: top .3s .6s, transform .3s;
-}
-.toggler > span:before {
-  top: 1rem;
-}
-.toggler > span:after {
-  top: -1rem;
-}
-.toggler--close > span {
-  transition: background .3s 0;
-  background: transparent;
-}
-.toggler--close > span:before,
-.toggler--close > span:after {
-  transition: top .3s, transform .3s .5s;
-  top: 0;
-}
-.toggler--close > span:before {
-  transform: rotate3d(0, 0, 1, 45deg);
-}
-.toggler--close > span:after {
-  transform: rotate3d(0, 0, 1, -45deg);
 }
