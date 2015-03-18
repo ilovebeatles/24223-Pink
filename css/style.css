@@ -145,9 +145,6 @@ body {
   text-indent: -9999px;
   background: url("../img/os_sprite.png") no-repeat;
 }
-.download__link--iphone {
-  background-position: ;
-}
 .download__link--android {
   background-position: -80px;
 }
@@ -182,7 +179,7 @@ body {
   overflow: hidden;
 }
 /*
-        Review slider
+    Review slider
 */
 .slider--review {
   background: #ffffff;
@@ -202,9 +199,11 @@ body {
   font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
   color: #000000;
 }
-/* Section end */
+/* 
+    Section end 
+*/
 /*
-        Benefits slider
+    Benefits slider
 */
 .slider--benefits {
   padding-top: 85px;
@@ -234,8 +233,6 @@ body {
   left: -40px;
   top: 10px;
   position: absolute;
-  -webkit-transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
   transform: rotate(-49deg);
   background: #d22856;
   font: 400 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
