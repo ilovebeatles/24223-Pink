@@ -1,17 +1,43 @@
-@font-face {
-  font-family: "Gotham";
-  src: url("../css/fonts/gotham-rounded-book.otf"), url("../css/fonts/gotham-rounded-book.eot"), url("../css/fonts/gotham-rounded-book.ttf"), url("../css/fonts/gotham-rounded-book.woff"), url("../css/fonts/gotham-rounded-book.svg");
-}
 html {
   font-size: 10px;
 }
 body {
   background: #3498db;
+  font-family: "Open sans", "Tahoma", "Verdana", sans-serif;
 }
 .center_wrapper {
   width: 320px;
   margin: 0 auto;
   color: #1d2631;
+}
+.deal {
+  background-image: linear-gradient(175deg, #ffffff 80%, #f2f2f2 20%);
+  padding: 35px 25px 60px 25px;
+  text-align: center;
+}
+.section_title {
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: normal;
+  color: #283645;
+}
+.slider_pagination {
+  text-align: center;
+}
+.slider_pagination a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background: #b5b9be;
+  text-indent: -9999px;
+}
+.slider_pagination a.active {
+  border: 3px solid #1d2631;
+  background: transparent;
 }
 .list {
   list-style: none;
@@ -21,17 +47,19 @@ body {
 /* Benefits border */
 /* Pagination */
 .logo {
-  font: normal 32px / 39px "Gotham";
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background: url("../img/Pink-logo-1.png") no-repeat;
   text-indent: -9999px;
 }
 .menu {
   background: url('../img/header_background.jpg') no-repeat;
 }
 .menu__title {
-  font: lighter 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: lighter;
+  font-size: 24px;
+  line-height: normal;
   color: #ffffff;
   text-align: center;
   margin-top: 20px;
@@ -63,18 +91,27 @@ body {
   list-style: none;
 }
 .menu__list li a {
-  font: bold 18px / 32px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 }
 .menu_btn {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50px;
-  height: 3em;
-  line-height: 3em;
-  user-select: none;
+  height: 25px;
+  line-height: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-indent: -9999px;
 }
 .menu_btn > span {
@@ -96,7 +133,10 @@ body {
   position: absolute;
   left: 0;
   content: '';
-  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transition: top .3s .6s, -webkit-transform .3s;
   transition: top .3s .6s, transform .3s;
 }
 .menu_btn > span:before {
@@ -111,14 +151,17 @@ body {
 }
 .menu_btn--close > span:before,
 .menu_btn--close > span:after {
+  transition: top .3s, -webkit-transform .3s .5s;
   transition: top .3s, transform .3s .5s;
   top: 0;
 }
 .menu_btn--close > span:before {
-  transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+          transform: rotate3d(0, 0, 1, 45deg);
 }
 .menu_btn--close > span:after {
-  transform: rotate3d(0, 0, 1, -45deg);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
 }
 .download {
   padding: 25px 25px;
@@ -131,7 +174,9 @@ body {
   border: 3px solid #ffffff;
   border-radius: 5em;
   padding: 10px 30px;
-  font: bold 1.8em / 1.8em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 1.8em;
   color: #ffffff;
   text-transform: none;
   text-decoration: none;
@@ -154,7 +199,9 @@ body {
 }
 .download__desc {
   margin-top: 20px;
-  font: lighter 14px / 24px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  line-height: 24px;
   color: #ffffff;
 }
 .benefits {
@@ -166,21 +213,23 @@ body {
   margin-bottom: 25px;
 }
 .benefits__item p {
-  font: normal 14px / 24px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
   color: #283645;
   margin-top: 0;
 }
 .benefits__title {
-  font: bold 1.8em / 2.4em "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
   color: #000000;
+  margin-bottom: 15px;
 }
 .sliders {
   text-align: center;
   overflow: hidden;
 }
-/*
-    Review slider
-*/
 .slider--review {
   background: #ffffff;
   padding-top: 50px;
@@ -191,20 +240,18 @@ body {
   margin: 0 auto;
 }
 .slider--review__caption p {
-  font: normal 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
   color: #283645;
   margin-bottom: 25px;
 }
 .slider--review__title {
-  font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
   color: #000000;
 }
-/* 
-    Section end 
-*/
-/*
-    Benefits slider
-*/
 .slider--benefits {
   padding-top: 85px;
   padding-bottom: 50px;
@@ -233,27 +280,37 @@ body {
   left: -40px;
   top: 10px;
   position: absolute;
-  transform: rotate(-49deg);
+  -webkit-transform: rotate(-49deg);
+      -ms-transform: rotate(-49deg);
+          transform: rotate(-49deg);
   background: #d22856;
-  font: 400 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 }
 .slider--benefits__title {
-  font: bold 18px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 }
 .slider--benefits__price {
-  font: normal 24px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
   color: #ffffff;
 }
 .slider--benefits__info {
   padding: 15px 0 15px 20px;
   border-bottom: 2px solid #e5e5e5;
-  font: normal 14px / 30px "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
   color: #1d2631;
   text-transform: uppercase;
   text-decoration: none;
@@ -263,7 +320,9 @@ body {
 .slider--benefits__table_wrapper {
   width: 99999px;
   font-size: 0;
-  transform: translateX(-256px);
+  -webkit-transform: translateX(-256px);
+      -ms-transform: translateX(-256px);
+          transform: translateX(-256px);
   margin-bottom: 35px;
 }
 .slider--benefits__info--checked {
@@ -299,39 +358,16 @@ body {
   margin-bottom: 20px;
 }
 .contacts__wrapper b {
-  font: bold 18px / normal "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: normal;
   color: #283645;
 }
 .contacts__title {
   width: 90%;
   margin: 0 auto;
-  font: lighter 24px / normal "Open sans", "Tahoma", "Verdana", sans-serif;
+  font-weight: lighter;
+  font-size: 24px;
+  line-height: normal;
   color: #d22856;
-}
-.deal {
-  background-image: linear-gradient(175deg, #ffffff 80%, #f2f2f2 20%);
-  padding: 35px 25px 60px 25px;
-  text-align: center;
-}
-.section_title {
-  margin-bottom: 30px;
-  font: normal 24px / normal "Open sans", "Tahoma", "Verdana", sans-serif;
-  color: #283645;
-}
-.slider_pagination {
-  text-align: center;
-}
-.slider_pagination a {
-  display: inline-block;
-  vertical-align: middle;
-  width: 6px;
-  height: 6px;
-  margin-right: 15px;
-  border-radius: 50%;
-  background: #b5b9be;
-  text-indent: -9999px;
-}
-.slider_pagination a.active {
-  border: 3px solid #1d2631;
-  background: transparent;
 }

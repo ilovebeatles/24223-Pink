@@ -1,5 +1,10 @@
+
 .logo {
-  .font_ex(normal, 32px, 39px, "Gotham", @white, uppercase, none);
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background: url("../img/Pink-logo-1.png") no-repeat; 
+  // svg на адаптивной версии будет
   .indent();
 }
 
@@ -8,8 +13,7 @@
 }
 
 .menu__title {
-  font: lighter 2.4em @font;
-  color: @white;
+  .font(lighter, 24px, normal, @white);
   .center();
   margin-top: 20px;
   margin-bottom: 30px;
@@ -44,7 +48,7 @@
     .list();
 
     a {
-      .font_ex(bold, 18px, 32px, @font, @white, uppercase, none);
+      .font(bold, 18px, 32px, @white, uppercase, none);
     }
   }
 }
@@ -54,8 +58,8 @@
   display: flex;
   align-items: center;
   width: 50px;
-  height: 3em;
-  line-height: 3em;
+  height: 25px;
+  line-height: 30px;
   user-select: none;
   .indent();
   

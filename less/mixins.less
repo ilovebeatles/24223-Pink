@@ -1,5 +1,6 @@
+
 .center () {
-    text-align: center;
+  text-align: center;
 }
 
 .list {
@@ -11,17 +12,28 @@
 }
 
 .paddings_off () {
-    padding: 0;
+  padding: 0;
 }
 
-.font (@weight, @fz, @lh, @ff, @color) {
-    font: @weight @fz / @lh @ff;
-    color: @color;
+.font (@weight, @fz, @lh, @color) {
+  font-weight: @weight;
+  font-size: @fz;
+  line-height: @lh;
+  color: @color;
 }
 
-.font_ex (@weight, @fz, @lh, @ff, @color, @transform, @decoration) {
-    font: @weight @fz / @lh @ff;
-    color: @color;
-    text-transform: @transform;
-    text-decoration: @decoration;
+// Как показала практика, true - не логическое значение, а переменная. Соответсвенно when (@transform = true) - не работает. Если делать полиморфно, то получится только так. Или есть другой способ, который я не нашёл.
+
+.font (@weight, @fz, @lh, @color, @transform, @decoration) 
+  when (@transform = none) and (@decoration = none), 
+       (@transform = uppercase) and (@decoration = none),
+       (@transform = uppercase) and (@decoration = underline),
+       (@transform = lowercase) and (@decoration = none),
+       (@transform = lowercase) and (@decoration = underline) {
+  font-weight: @weight;
+  font-size: @fz;
+  line-height: @lh;
+  color: @color;
+  text-transform: @transform;
+  text-decoration: @decoration;
 }
