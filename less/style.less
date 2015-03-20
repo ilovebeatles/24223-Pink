@@ -9,3 +9,143 @@
 @import url("components/review_slider.less");
 @import url("components/benefits_slider.less");
 @import url("components/contacts.less");
+
+* {
+  transition-duration: .5s;
+}
+
+.more {
+  display: none;
+}
+
+.mega-block {
+    background: url('../img/header_background.jpg') no-repeat;
+  }
+
+@media(min-width: 480px) and (max-width: 3000px){
+    
+  body {
+    background: @white;
+  }
+
+  /* HEADER */
+
+  .center_wrapper {
+    width: auto;
+    max-width: 1200px;
+  }
+
+  .header {
+    // background: url('../img/header_backgroun700.jpg') no-repeat;
+    background: url('../img/header_background2.jpg') no-repeat 50% bottom;
+    padding: 153px 0;
+  }
+
+  .mega_block__image {
+    float: right;
+    display: none;
+  }
+
+  .more {
+    display: block;
+  }
+
+  .menu__title {
+    float: left;
+    width: 27%;
+    margin-left: 11%;
+    display: none;
+  }
+
+  .download .menu__title{
+    display: block;
+    width: 35%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .menu {
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+
+  .logo {
+    background: url("../img/Pink-logo-2@1x.png") no-repeat;
+    width: 200px;
+    height: 45px;
+  }
+
+
+  .download {
+    width: 30%;
+    background: transparent;
+    float: left;
+    padding: 0;
+    margin-left: 6%;
+  }
+
+  /* THE END */
+
+
+  /* Benefits */
+  
+  .benefits img{
+    display: none;
+  }
+  
+  /* The end */
+
+
+  /* Research */
+  
+  .research {
+    background: @white;
+  }
+
+  .research img {
+    float: left
+  }
+  
+  .research__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .research__info {
+    float: right;
+    width: 50%;
+  }
+
+  /* The end */
+
+  /* slider--benefits */
+  
+  .slider--benefits {
+    background: transparent;
+  }
+
+  .slider--benefits__info {
+    color: transparent;
+  }
+
+  .slider--benefits__info {
+    background-position: 50% ;
+  }
+
+  .slider--benefits__table_wrapper {
+    transform: translateX(0);
+  }
+
+  .slider--benefits__table_wrapper {
+    width: auto;
+  }
+
+  .slider--benefits .slider__slide {
+    width: 33%;
+  }
+
+  /* The end */
+
+}

@@ -46,15 +46,15 @@ body {
 /* Цвет меню */
 /* Benefits border */
 /* Pagination */
+.header {
+  background: url("../img/header_background.jpg") no-repeat;
+}
 .logo {
   display: inline-block;
   width: 80px;
   height: 30px;
   background: url("../img/Pink-logo-1.png") no-repeat;
   text-indent: -9999px;
-}
-.menu {
-  background: url('../img/header_background.jpg') no-repeat;
 }
 .menu__title {
   font-weight: lighter;
@@ -66,7 +66,7 @@ body {
   margin-bottom: 30px;
 }
 .menu__logo_wrapper {
-  padding: 10px 20px;
+  padding: 10px 6%;
   background: url("../img/menu-background.png");
 }
 .menu__list_wrapper {
@@ -99,19 +99,12 @@ body {
   text-decoration: none;
 }
 .menu_btn {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 50px;
   height: 25px;
   line-height: 30px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   text-indent: -9999px;
 }
 .menu_btn > span {
@@ -133,10 +126,7 @@ body {
   position: absolute;
   left: 0;
   content: '';
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  transition: top .3s .6s, -webkit-transform .3s;
+  transform-origin: 50% 50%;
   transition: top .3s .6s, transform .3s;
 }
 .menu_btn > span:before {
@@ -151,17 +141,14 @@ body {
 }
 .menu_btn--close > span:before,
 .menu_btn--close > span:after {
-  transition: top .3s, -webkit-transform .3s .5s;
   transition: top .3s, transform .3s .5s;
   top: 0;
 }
 .menu_btn--close > span:before {
-  -webkit-transform: rotate3d(0, 0, 1, 45deg);
-          transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
 }
 .menu_btn--close > span:after {
-  -webkit-transform: rotate3d(0, 0, 1, -45deg);
-          transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
 }
 .download {
   padding: 25px 25px;
@@ -280,9 +267,7 @@ body {
   left: -40px;
   top: 10px;
   position: absolute;
-  -webkit-transform: rotate(-49deg);
-      -ms-transform: rotate(-49deg);
-          transform: rotate(-49deg);
+  transform: rotate(-49deg);
   background: #d22856;
   font-weight: 400;
   font-size: 14px;
@@ -320,9 +305,7 @@ body {
 .slider--benefits__table_wrapper {
   width: 99999px;
   font-size: 0;
-  -webkit-transform: translateX(-256px);
-      -ms-transform: translateX(-256px);
-          transform: translateX(-256px);
+  transform: translateX(-256px);
   margin-bottom: 35px;
 }
 .slider--benefits__info--checked {
@@ -370,4 +353,106 @@ body {
   font-size: 24px;
   line-height: normal;
   color: #d22856;
+}
+* {
+  transition-duration: .5s;
+}
+.more {
+  display: none;
+}
+.mega-block {
+  background: url('../img/header_background.jpg') no-repeat;
+}
+@media (min-width: 480px) and (max-width: 3000px) {
+  body {
+    background: #ffffff;
+  }
+  /* HEADER */
+  .center_wrapper {
+    width: auto;
+    max-width: 1200px;
+  }
+  .header {
+    background: url('../img/header_background2.jpg') no-repeat 50% bottom;
+    padding: 153px 0;
+  }
+  .mega_block__image {
+    float: right;
+    display: none;
+  }
+  .more {
+    display: block;
+  }
+  .menu__title {
+    float: left;
+    width: 27%;
+    margin-left: 11%;
+    display: none;
+  }
+  .download .menu__title {
+    display: block;
+    width: 35%;
+    margin: 0 auto;
+    float: none;
+  }
+  .menu {
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  .logo {
+    background: url("../img/Pink-logo-2@1x.png") no-repeat;
+    width: 200px;
+    height: 45px;
+  }
+  .download {
+    width: 30%;
+    background: transparent;
+    float: left;
+    padding: 0;
+    margin-left: 6%;
+  }
+  /* THE END */
+  /* Benefits */
+  .benefits img {
+    display: none;
+  }
+  /* The end */
+  /* Research */
+  .research {
+    background: #ffffff;
+  }
+  .research img {
+    float: left;
+  }
+  .research__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .research__info {
+    float: right;
+    width: 50%;
+  }
+  /* The end */
+  /* slider--benefits */
+  .slider--benefits {
+    background: transparent;
+  }
+  .slider--benefits__info {
+    color: transparent;
+  }
+  .slider--benefits__info {
+    background-position: 50% ;
+  }
+  .slider--benefits__table_wrapper {
+    transform: translateX(0);
+  }
+  .slider--benefits__table_wrapper {
+    width: auto;
+  }
+  .slider--benefits .slider__slide {
+    width: 33%;
+  }
+  /* The end */
 }
