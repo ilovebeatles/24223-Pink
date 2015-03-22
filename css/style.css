@@ -99,12 +99,19 @@ body {
   text-decoration: none;
 }
 .menu_btn {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 50px;
   height: 25px;
   line-height: 30px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-indent: -9999px;
 }
 .menu_btn > span {
@@ -126,7 +133,10 @@ body {
   position: absolute;
   left: 0;
   content: '';
-  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transition: top .3s .6s, -webkit-transform .3s;
   transition: top .3s .6s, transform .3s;
 }
 .menu_btn > span:before {
@@ -141,14 +151,17 @@ body {
 }
 .menu_btn--close > span:before,
 .menu_btn--close > span:after {
+  transition: top .3s, -webkit-transform .3s .5s;
   transition: top .3s, transform .3s .5s;
   top: 0;
 }
 .menu_btn--close > span:before {
-  transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+          transform: rotate3d(0, 0, 1, 45deg);
 }
 .menu_btn--close > span:after {
-  transform: rotate3d(0, 0, 1, -45deg);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
 }
 .download {
   padding: 25px 25px;
@@ -267,7 +280,9 @@ body {
   left: -40px;
   top: 10px;
   position: absolute;
-  transform: rotate(-49deg);
+  -webkit-transform: rotate(-49deg);
+      -ms-transform: rotate(-49deg);
+          transform: rotate(-49deg);
   background: #d22856;
   font-weight: 400;
   font-size: 14px;
@@ -305,7 +320,9 @@ body {
 .slider--benefits__table_wrapper {
   width: 99999px;
   font-size: 0;
-  transform: translateX(-256px);
+  -webkit-transform: translateX(-256px);
+      -ms-transform: translateX(-256px);
+          transform: translateX(-256px);
   margin-bottom: 35px;
 }
 .slider--benefits__info--checked {
@@ -384,13 +401,12 @@ body {
     display: block;
   }
   .menu__title {
-    float: left;
-    width: 27%;
-    margin-left: 11%;
-    display: none;
+    width: 18%;
+    margin-left: 18%;
+    display: block;
   }
   .download .menu__title {
-    display: block;
+    display: none                                           ;
     width: 35%;
     margin: 0 auto;
     float: none;
@@ -407,11 +423,16 @@ body {
     height: 45px;
   }
   .download {
-    width: 30%;
+    width: 40%;
     background: transparent;
     float: left;
     padding: 0;
     margin-left: 6%;
+  }
+  .download__title_link {
+    max-width: 275px;
+    margin: auto;
+    margin-bottom: 25px;
   }
   /* THE END */
   /* Benefits */
@@ -446,7 +467,9 @@ body {
     background-position: 50% ;
   }
   .slider--benefits__table_wrapper {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
   }
   .slider--benefits__table_wrapper {
     width: auto;
