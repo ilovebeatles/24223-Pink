@@ -153,4 +153,36 @@
 
   /* The end */
 
+  /* Deal */
+  .deal {
+    background-image: linear-gradient(177deg, @white 75%, @gray 25%);
+  }
+
+  /* The end */
+
 }
+
+
+// Почему innerhtml не работает вместе с переменной и тегами
+
+
+// function addText() {
+//     var target = $(".jFlowControl.active");
+//     var globalParent = target.parent(".second-page");
+//     console.log("Скрипт работает!");
+//     if(globalParent.has(".info")) {
+//       console.log("Условие работает!");
+//       if($(globalParent).find(".info").find(".desc")) {
+//         console.log("Третье условие сработало!")
+//         var desc = $(globalParent).find(".info");
+//         if(desc) {
+//           console.log("Переменная существует!");
+//           $(desc).find(".desc").html("ABVGD");
+//           $("<div class='abv1' style='font-size: 50em;width: 50000px;height: 500000px; background: red;'>ABVGD</div>").insertBefore(desc);
+//           console.log($(".abv1"))
+//         }
+//       }
+//     }
+//   }
+
+//   addText();
