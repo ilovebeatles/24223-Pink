@@ -18,3 +18,29 @@
   .font(bold, 18px, 24px, @black);
   margin-bottom: 15px;
 }
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .benefits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .benefits__text {
+    order: 2;
+    width: 50%;
+  }
+
+  .benefits__image {
+    order: 1;
+    align-self: flex-start;
+    margin-right: 10%;
+    margin-top: -60px;
+  }
+
+  .benefits__item {
+    order: 2;
+    text-align: left;
+  }
+}
