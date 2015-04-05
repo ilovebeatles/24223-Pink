@@ -7,6 +7,10 @@
 
 .benefits__item {
   margin-bottom: 25px;
+
+  img {
+    display: none;
+  }
 }
 
 .benefits__item p {
@@ -36,11 +40,61 @@
     order: 1;
     align-self: flex-start;
     margin-right: 10%;
-    margin-top: -60px;
+    margin-top: -100px;
+    width: 39%;
+
+    // img {
+    //   width: 100%;
+    //   max-width: 268px;
+    // }
   }
 
   .benefits__item {
     order: 2;
     text-align: left;
+  }
+}
+
+@media(min-width: 1200px) and (max-width: 1400px) {
+  .benefits {
+    background-image: linear-gradient(174deg, #ffffff 20%, #f2f2f2 20%);
+    padding-top: 30px;  
+  }
+
+  .benefits__item {
+    display: inline-block;
+    width: 290px;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    * {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    img {
+      display: inline;
+    }
+
+    p {
+      width: 85%;
+      font-size: 18px;
+    }
+  }
+
+  .benefits__title {
+    width: 80%;
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .benefits__image {
+    display: none;
   }
 }
