@@ -34,7 +34,7 @@
   .font(normal, 14px, 30px, @menu_blue);
 }
 
-@media(min-width: 480px) and (max-width: 1200px) {
+@media(min-width: 600px) and (max-width: 1200px) {
   
   .slider--review .slider_pagination {
     margin-top: 20px;
@@ -67,7 +67,7 @@
 
 }
 
-@media(min-width: 1200px) and(max-width: 1400px) {
+@media(min-width: 1200px) {
   .sliders {
     padding-top: 70px;
     background: @white;
@@ -106,23 +106,20 @@
     height: 30px;
     display: inline-block;
     text-indent: -9999px;
-    background: url("../img/controls.png") no-repeat;
+    background: url("../img/controls.png") -35px no-repeat;
   }
 
   .slider_controls--prev {
     left: 200px;
     top: 75px;
+    background-position: 5px;
   }
 
   .slider_controls--next {
     right: 200px;
     top: 75px;
   }
-
-  .slider_controls {
-    background-position: -50px;
-  }
-
+  
   .slider--review:before {
     content: "";
     position: absolute;

@@ -10,11 +10,6 @@
 // Пройдём svg - попробую через него сделать
 
 .contacts:before, .contacts:after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 70px;
-  bottom: -70px;
 }
 
 .contacts:before {
@@ -42,7 +37,12 @@
   // .font(lighter, 2.4em, 1.8em, @font, @pink);
 }
 
-@media (min-width: 480px) and (max-width: 1200px) {
+.contacts__arrow {
+  position: relative;
+  bottom: -41px;
+}
+
+@media (min-width: 680px) and (max-width: 1200px) {
   .contacts {
     font-size: 0;
   }
@@ -56,9 +56,13 @@
 
 }
 
-@media(min-width: 1200px) and (max-width: 1400px) {
+@media(min-width: 1200px) {
   .contacts {
     font-size: 0;
+  }
+
+  .contacts__arrow {
+    bottom: -130px;
   }
 
   .contacts:before {

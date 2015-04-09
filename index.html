@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+  <script src="js/picturefill.js" async></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,9 +24,15 @@
           </ul>
         </div>
       </div>
-      <img class="mobile_image" src="img/header_phone.png" alt="">
+      <div class="menu__title">Взгляните на жизнь<br> иначе!</div>
+      <picture>
+        <img class="mobile_image" src="img/header_phone.png" 
+        srcset="img/adaptive/iphone-hand-1-2x 2x,
+                img/adaptive/iphone-hand-1-3x 3x,"
+        alt="">
+      </picture>
       <div class="download">
-        <div class="menu__title">Взгляните на жизнь<br> иначе!</div>
+        
         <a class="download__title_link" href="#">Скачать приложение</a>
         <a href="#" class="download__link download__link--iphone" title="Приложение для Iphone">Iphone</a>
         <a href="#" class="download__link download__link--android" title="Приложение для Android">Android</a>
@@ -40,17 +47,29 @@
     <div class="benefits clearfix">
       <div class="benefits__text">
         <div class="benefits__item">
-          <img src="img/iphone-screen-3-1-1x.png" alt="">
+          <picture>
+            <img src="img/iphone-screen-3-1-1x.png"
+             srcset="img/adaptive/iphone-screen-3-1-2x.png 2x"
+             alt="">
+          </picture>
           <div class="benefits__title">Поднимает настроение</div>
           <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
         </div>
         <div class="benefits__item">
-          <img src="img/iphone-screen-3-2-1x.png" alt="">
+          <picture>
+            <img src="img/iphone-screen-3-2-1x.png"
+             srcset="img/adaptive/iphone-screen-3-2-2x.png 2x"
+             alt="">
+          </picture>
           <div class="benefits__title">Меняет мир вокруг</div>
           <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
         </div>
         <div class="benefits__item">
-          <img src="img/iphone-screen-3-3-1x.png" alt="">
+          <picture>
+            <img src="img/iphone-screen-3-3-1x.png"
+             srcset="img/adaptive/iphone-screen-3-3-2x.png 2x"
+             alt="">
+          </picture>
           <div class="benefits__title">Заводит новых друзей</div>
           <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
         </div>
@@ -58,11 +77,13 @@
       <div class="benefits__image">
         <picture>
           <source 
-            media="(min-width: 480px)"
+            media="(min-width: 600px)"
             srcset="img/adaptive/iphone-screen-2-3-1x.png">
           
           <img src="img/benefits_phone.png" alt="Улыбайтесь"
-            srcset="img/adaptive/iphone-screen-2-3-2x.png 2x">
+            sizes="(min-width: 600px)"
+            srcset="img/adaptive/iphone-screen-2-3-2x.png 2x,
+            img/adaptive/iphone-screen-2-3-2x.png 2x 600w">
         </picture>
       </div>
     </div>
@@ -171,6 +192,7 @@
           <div class="contacts__title">Санкт-Петербург, Невский проспект, д. 20</div>
         </div>
       </div>
+      <img class="contacts__arrow" src="img/arrow.svg" alt="">
     </div>
     <div class="map">
       space
@@ -181,8 +203,11 @@
           <picture>
             <source 
               media="(min-width: 1200px)"
-              srcset="img/adaptive/Pink-logo-footer-3-1x.png">
-            <img src="img/Pink-logo-footer-3-1x.png" alt="">
+              srcset="img/adaptive/Pink-logo-footer-3-1x.png,
+                      img/adaptive/Pink-logo-footer-3-2x.png 2x">
+            <img 
+            srcset="img/adaptive/Pink-logo-footer-2-2x.png 2x"
+            src="img/adaptive/Pink-logo-footer-2-1x.png" alt="">
           </picture>
         </a>
       </div>
