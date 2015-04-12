@@ -2,11 +2,16 @@
 .center_wrapper { 
   width: 320px;
   margin: 0 auto;
-  color: @deep_blue;
 }
 
 .map {
-  height: 300px;
+  position: relative;
+  z-index: 1;
+  height: 200px;
+}
+
+#map-canvas {
+  height: 100%;
 }
 
 .deal {
@@ -39,54 +44,52 @@
   border: 3px solid @deep_blue;
   background: transparent;
 }
-
-/* Research */
   
-  .research {
-    background: @white;
-    display: none;
-    text-align: center;
-    padding: 5% 20px;
-    font-size: 0;
+.research {
+  background: @white;
+  display: none;
+  text-align: center;
+  padding: 5% 20px;
+  font-size: 0;
 
-    p {
-      .font(normal, 14px, 24px, @menu_blue);
-    }
+  p {
+    .font(normal, 14px, 24px, @menu_blue);
   }
+}
 
-  .research img {
-    width: 40%;
-    max-width: 290px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  
-  .research__title {
-    font-size: 20px;
-    font-weight: bold;
-    .font(bold, 30px, 36px, @black);
-  }
+.research img {
+  width: 40%;
+  max-width: 290px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
-  .research__info {
-    display: inline-block;
-    vertical-align: middle;
-    width: 40%;
-    margin-left: 10%;
-  }
+.research__title {
+  font-size: 20px;
+  font-weight: bold;
+  .font(bold, 30px, 36px, @black);
+}
 
-  .research__link {
-    .font(normal, 14px, 24px, @pink);
-  }
+.research__info {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40%;
+  margin-left: 10%;
+}
 
-  /* The end */
-
-  .footer {
-    display: none;
-  }
+.research__link {
+  .font(normal, 14px, 24px, @pink);
+}
 
 @media(min-width: 600px) and (max-width: 1200px) {
+  .center_wrapper {
+    width: auto;
+    max-width: 1200px;
+  }
+
   .deal {
     padding-bottom: 150px;
+    background-image: linear-gradient(177deg, @white 75%, @gray 25%);
   }
 
   .section_title {
@@ -103,6 +106,10 @@
 
   .research {
     display: block;
+  }
+
+  .map {
+    height: 380px;
   }
 }
 
@@ -135,9 +142,4 @@
   .research {
     display: block;
   }
-
-  .footer {
-    display: block;
-  }
-
 }

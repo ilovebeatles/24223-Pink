@@ -1,12 +1,19 @@
-
 .header {
   background: url("../img/header_background.jpg") no-repeat;
 }
 
 .menu {
+  position: relative;
   box-sizing: border-box;
   padding: 10px 6%;
   background: url("../img/menu-background.png");
+  z-index: 100;
+
+
+  &.active {
+    background: @menu_blue;
+    border-bottom: 1px solid @black;
+  }
 }
 
 .logo {
@@ -38,13 +45,14 @@
   position: absolute;
   width: 100%;
   display: none;
-  top: 0;
+  top: 41px;
+  left: 0;
   .paddings_off();
-  
-  li:first-child {
-    border-top: 0;
-  }
 
+  &.active {
+    display: block;
+  }
+  
   li {
     border-bottom: 1px solid @black;
     border-top: 1px solid @lighter;
@@ -53,7 +61,17 @@
     .list();
 
     a {
+      padding: 10px 0;
+      display: block;
       .font(bold, 18px, 32px, @white, uppercase, none);
+
+      &:hover {
+        color: @pink;
+      }
+
+      &:active {
+        color: fade(@white, 50%);
+      }
     }
   }
 }
@@ -67,6 +85,14 @@
   line-height: 30px;
   user-select: none;
   .indent();
+
+  &:hover > span, &:hover > span:after, &:hover > span:before {
+    background: @pink;
+  }
+
+  &:active > span, &:active > span:after, &:active > span:before {
+    background: fade(@pink, 50%);
+  }
   
   > span {
     display: inline-block;
@@ -76,7 +102,6 @@
     background: #fff;
     border-radius: .2rem;
     position: relative;
-    transition: background .3s .5s;
     
     &:before,
     &:after {
@@ -101,10 +126,11 @@
   }
   
   &--close {
+
     > span {
       transition: background .3s 0;
-      background: transparent;
-      
+      background: transparent !important;
+
       &:before,
       &:after {
         transition: top .3s, transform .3s .5s;
@@ -126,7 +152,6 @@
 @media(min-width: 600px) and (max-width: 1200px){
 
    .header {
-    // background: url('../img/header_backgroun700.jpg') no-repeat;
     background: url('../img/header_background2.jpg') no-repeat 50% bottom;
     padding-bottom: 95px;
     padding-top: 155px;
@@ -145,6 +170,10 @@
     width: 100%;
     top: 0;
     padding: 20px 5%;
+  }
+
+  .menu__list {
+    top: 76px;
   }
 
   .menu__list_wrapper {
@@ -168,8 +197,8 @@
   }
 
   .header {
-  background: url("../img/header_background3.jpg") no-repeat;
-  padding-bottom: 125px;
+    background: url("../img/header_background3.jpg") no-repeat;
+    padding-bottom: 125px;
   }
 
   .logo {
@@ -178,8 +207,10 @@
     height: 55px;
   }
 
-  .menu {
+  .menu.active {
     padding: 30px 125px 30px 125px;
+    background: url("../img/menu-background.png");
+    border-bottom: 0;
   }
 
   .menu_btn {
@@ -208,7 +239,50 @@
 
       a {
         .font(normal, 18px, 18px, @white, none, none);
+
+        &:hover {
+          padding-bottom: 3px;
+          border-bottom: 3px solid @white;
+          color: @white;
+        }
+
+        &:active {
+          opacity: .5;
+          border-color: transparent;
+        }
       }
     }
+  }
+}
+
+@media 
+only screen and( min-resolution: 180dpi) and(max-width: 600px) {
+  .header {
+    background: url("../img/adaptive/background-1-2x.jpg") no-repeat;
+  }
+
+  .logo {
+    background: url("../img/adaptive/Pink-logo-2-2x.png");
+  }
+}
+
+@media 
+only screen and( min-resolution: 270dpi) and(max-width: 600px) {
+  .header {
+    background: url("../img/adaptive/background-1-3x.jpg") no-repeat;
+  }
+}
+
+
+@media 
+only screen and( min-resolution: 180dpi) and (min-width: 600px) {
+  .header {
+    background: url("../img/adaptive/background-2-2x.jpg") no-repeat;
+  }
+
+  .logo {
+    width: 290px;
+    height: 80px;
+    background: url("../img/adaptive/Pink-logo-3-2x.png");
   }
 }

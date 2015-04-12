@@ -11,6 +11,14 @@
   border: 3px solid @white;
   border-radius: 5em;
   padding: 10px 30px;
+  &:hover {
+    color: @pink;
+    background: @white;
+  }
+
+  &:active {
+    color: fade(@pink, 50%);
+  }  
   .font(bold, 1.8em, 1.8em, @white, none, none);
 }
 

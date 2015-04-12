@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
-  <script src="js/picturefill.js" async></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,14 +14,15 @@
           <a class="logo" href="/">Pink</a>
         </div>
         <div class="menu__list_wrapper">
-          <a href="" class="menu_btn" id="toggler"><span>☰</span></a>
-          <ul class="menu__list">
+          <a href="" class="menu_btn toggler" id="toggler"><span>☰</span></a>
+          
+        </div>
+        <ul class="menu__list">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Возможности</a></li>
             <li><a href="#">Отзывы</a></li>
             <li><a href="#">Стоимость</a></li>
           </ul>
-        </div>
       </div>
       <div class="menu__title">Взгляните на жизнь<br> иначе!</div>
       <picture>
@@ -185,7 +185,7 @@
         </div>
         <div class="contacts__wrapper contacts__wrapper--order-2">
           <b>Пишите:</b>
-          <div class="contacts__title">hello@pinkapp.ru</div>
+          <div class="contacts__title"><a href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></div>
         </div>
         <div class="contacts__wrapper">
           <b>Приезжайте в гости:</b>
@@ -195,7 +195,7 @@
       <img class="contacts__arrow" src="img/arrow.svg" alt="">
     </div>
     <div class="map">
-      space
+      <div id="map-canvas"></div>
     </div>
     <div class="footer clearfix">
       <div class="footer__logo">
@@ -229,5 +229,23 @@
       </div>
     </div>
   </div>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <script>
+    var map;
+    function initialize() {
+      var mapOptions = {
+        zoom: 16,
+        center: new google.maps.LatLng(55.744655, 37.611485)
+      };
+      map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+  <script src="js/picturefill.js" async></script>
+  <script src="js/tap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
