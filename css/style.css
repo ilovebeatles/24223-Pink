@@ -13,6 +13,11 @@ body {
   z-index: 1;
   height: 200px;
 }
+.map__arrow {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
 #map-canvas {
   height: 100%;
 }
@@ -905,11 +910,6 @@ body {
   text-decoration: none;
   color: rgba(40, 54, 69, 0.5);
 }
-.contacts__arrow {
-  position: relative;
-  bottom: -41px;
-  z-index: 2;
-}
 @media (min-width: 600px) and (max-width: 1200px) {
   .contacts {
     font-size: 0;
@@ -920,16 +920,10 @@ body {
     width: 50%;
     margin-bottom: 40px;
   }
-  .contacts__arrow {
-    bottom: -76px;
-  }
 }
 @media (min-width: 1200px) {
   .contacts {
     font-size: 0;
-  }
-  .contacts__arrow {
-    bottom: -130px;
   }
   .map {
     height: 520px;
