@@ -1,0 +1,110 @@
+
+.sliders {
+  .center();
+  overflow: hidden;
+}
+
+/*
+    Review slider
+*/
+
+.slider--review {
+  background: @white;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.slider--review__caption {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.slider--review__caption p {
+  .font(normal, 14px, 30px, @menu_blue);
+  margin-bottom: 25px;
+}
+
+.slider--review__title {
+  .font(bold, 18px, 30px, @black);
+}
+
+/* 
+    Section end 
+*/
+
+/*
+    Benefits slider
+*/
+
+.slider--benefits {
+  padding-top: 85px;
+  padding-bottom: 50px;
+  text-align: left;
+  background-image: linear-gradient(176.5deg, @white 5%, @gray 5%)
+}
+
+.slider--benefits .slider__slide {
+  width: 275px;
+  display: inline-block;
+  vertical-align: top;
+  border-left: 2px solid @gray2;
+}
+
+.slider--benefits .slider__slide:last-of-type {
+  border-right: 2px solid @gray2;
+}
+
+.slider--benefits__header {
+  position: relative;
+  background: @menu_blue;
+  .center();
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.slider--benefits__header--hit:before {
+  content: "Хит";
+  padding: 0 50px;
+  left: -40px;
+  top: 10px;
+  position: absolute;
+  transform: rotate(-49deg);
+  background: #d22856;
+  .font(400, 14px, 30px, @white, uppercase, none);
+}
+
+.slider--benefits__title {
+  .font(bold, 18px, 30px, @white, uppercase, none);
+}
+
+.slider--benefits__price {
+  .font(normal, 24px, 30px, @white);
+}
+
+.slider--benefits__info {
+  padding: 15px 0 15px 20px;
+  border-bottom: 2px solid @gray2;
+  .font(normal, 14px, 30px, @deep_blue, uppercase, none);
+  background: @white;
+  text-align: left;
+}
+
+.slider--benefits__table_wrapper {
+  width: 99999px;
+  font-size: 0;
+  transform: translateX(-256px);
+  margin-bottom: 35px;
+  transition-duration: .2s;
+}
+
+.slider--benefits__info--checked {
+  background: @white url("../img/checked.png") no-repeat 90%;
+}
+
+.slider--benefits__info--unchecked {
+  background: @white url("../img/unchecked.png") no-repeat 90%;
+}
+
+/* 
+    Section end 
+*/

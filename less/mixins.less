@@ -1,0 +1,32 @@
+
+.center () {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+}
+
+.indent() {
+  text-indent: -9999px;
+}
+
+.paddings_off () {
+  padding: 0;
+}
+
+.font (@weight, @fz, @lh, @color) {
+  font-weight: @weight;
+  font-size: @fz;
+  line-height: @lh;
+  color: @color;
+}
+
+.font (@weight, @fz, @lh, @color, @transform, @decoration) {
+  font-weight: @weight;
+  font-size: @fz;
+  line-height: @lh;
+  color: @color;
+  text-transform: @transform;
+  text-decoration: @decoration;
+}

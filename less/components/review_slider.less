@@ -1,0 +1,151 @@
+
+.sliders {
+  .center();
+  overflow: hidden;
+}
+
+.slider_controls {
+  display: none;
+
+  &.disabled {
+    opacity: .6;
+    cursor: default;
+  }
+}
+
+.slider--review {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  position: relative;
+  background: @white;
+}
+
+.slider--review__caption {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.slider--review__caption p {
+  .font(normal, 14px, 30px, @menu_blue);
+  margin-bottom: 25px;
+}
+
+.slider--review__title {
+  .font(bold, 18px, 30px, @black);
+}
+
+.slider--review__info {
+  display: none;
+  .font(normal, 14px, 30px, @menu_blue);
+}
+
+@media(min-width: 600px) and (max-width: 1200px) {
+  
+  .slider--review .slider_pagination {
+    margin-top: 20px;
+  }
+
+  .slider--review__info {
+    display: block;
+    order: 3;
+  }
+
+  .slider--review__caption{
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    p {
+      order: 1;
+      display: block;
+      font-size: 18px;
+    }
+  }
+
+  .slider--review__title {
+    order: 2;
+    width: 100%;
+    font-size: 20px;
+  }
+
+}
+
+@media(min-width: 1200px) {
+  .sliders {
+    padding-top: 70px;
+    background: @white;
+  }
+
+  .slider--review__caption {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .slider--review__title {
+    order: 2;
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .slider--review__info {
+    display: block;
+    order: 3;
+    font-size: 18px;
+  }
+
+  .slider--review .slider_pagination {
+    display: none;
+  }
+
+  .slider_controls {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    background: url("../img/controls.png") -35px no-repeat;
+
+    &:focus {
+      color: transparent;
+    }
+  
+    &:active {
+      color: transparent;
+    }
+
+    &:visited {
+      color: transparent;
+    }
+
+  }
+
+  .slider_controls--prev {
+    left: 200px;
+    top: 75px;
+    background-position: 5px;
+  }
+
+  .slider_controls--next {
+    right: 200px;
+    top: 75px;
+  }
+  
+  .slider--review:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 100px;
+    background: url("../img/quotes.svg") no-repeat;
+  }
+}
