@@ -36,6 +36,12 @@ body {
 .slider_pagination {
   text-align: center;
 }
+.slider_pagination--review {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -37px;
+}
 .slider_pagination a {
   display: inline-block;
   vertical-align: middle;
@@ -165,9 +171,6 @@ body {
   .map__arrow {
     top: -200px;
   }
-}
-.list {
-  list-style: none;
 }
 /* Рамки в меню */
 /* Цвет меню */
@@ -489,7 +492,7 @@ body {
   }
   .menu__list {
     position: static;
-    display: block;
+    display: block !important;
     text-align: right;
     max-height: 37px;
   }

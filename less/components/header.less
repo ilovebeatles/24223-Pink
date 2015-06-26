@@ -29,7 +29,7 @@
 
 .menu__title {
   .font(lighter, 24px, normal, @white);
-  .center();
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -51,7 +51,7 @@
   top: 41px;
   left: 0;
   z-index: 2;
-  .paddings_off();
+  padding: 0;
 
   &.active {
     display: block;
@@ -61,8 +61,8 @@
     border-bottom: 1px solid @black;
     border-top: 1px solid @lighter;
     background: @menu_blue;
-    .center();
-    .list();
+    text-align: center;
+    list-style: none;
 
     a {
       padding: 10px 0;
@@ -242,7 +242,7 @@
 
   .menu__list {
     position: static;
-    display: block;
+    display: block !important; //Нам нужно перебивать inline стиль javascripta
     text-align: right;
     max-height: 37px;
 
